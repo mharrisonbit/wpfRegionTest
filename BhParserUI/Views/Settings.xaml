@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="BhParserUI.Views.Settings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Hello from the settings"
+                   FontSize="36"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"/>
+        <Label Grid.Row="2"
+               Grid.Column="0">Email To Check</Label>
+        <TextBox Grid.Row="3"
+                 Grid.Column="0"
+                 Text="{Binding EMailToCheckTxt}"/>
+        <Label Grid.Row="4"
+               Grid.Column="0">Password</Label>
+        <TextBox Grid.Row="5"
+                 Grid.Column="0"
+                 Text="{Binding EmailPasswordTxt}"/>
+        <Button Grid.Row="7"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Command="{Binding SettingClk}">Save</Button>
+    </Grid>
+</UserControl>
